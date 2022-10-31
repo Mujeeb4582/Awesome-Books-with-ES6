@@ -25,16 +25,14 @@ const emptyMessage = () => {
 // nav section
 navMenu();
 
-export { emptyMessage, booksList };
-
 // Loop over Array, create the element and append to the DOM
-function renderBookList(lists) {
+const renderBookList = (lists) => {
   emptyMessage();
   lists.forEach((element, index) => {
     const book = new BookInfo(element.title, element.author);
     book.createListItem(element, index);
   });
-}
+};
 
 // check is booksList exist in localStorage
 const storedBookList = localStorage.getItem('list');
@@ -46,7 +44,6 @@ if (storedBookList) {
   renderBookList(booksList);
 }
 
-// const success = document.querySelector('.success');
 // form part
 addBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -75,3 +72,5 @@ addBookForm.addEventListener('submit', (event) => {
   localStorage.setItem('list', JSON.stringify(booksList));
   emptyMessage();
 });
+
+export { emptyMessage, booksList };
