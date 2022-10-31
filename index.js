@@ -1,6 +1,4 @@
-import {
-  addBookForm, msg, success,
-} from './modules/HtmlElements.js';
+import { addBookForm, msg, success } from './modules/HtmlElements.js';
 import { clearField } from './modules/clearInputField.js';
 import navMenu from './modules/nav-menu.js';
 
