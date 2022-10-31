@@ -1,58 +1,60 @@
 // nav section start here
+import {
+  // eslint-disable-next-line max-len
+  listSection, addSection, contactSection, books, heading, add, addTextColor, listTextColor, contactTextColor,
+} from './HtmlElements.js';
+
 const navMenu = () => {
-  function showAdddeff() {
-    document.getElementById('list-section').setAttribute('class', 'non-show');
-    document.getElementById('add-section').setAttribute('class', 'show');
-    document
-      .getElementById('contact-section')
-      .setAttribute('class', 'non-show');
-    document.getElementById('books').setAttribute('class', 'books');
-    document.getElementById('heading').setAttribute('class', 'non-show');
-    document.getElementById('add').style.color = 'green';
+  // Show add section on website when website loaded
+  function showAddSectionFirst() {
+    listSection.setAttribute('class', 'non-show');
+    addSection.setAttribute('class', 'show');
+    contactSection.setAttribute('class', 'non-show');
+    books.setAttribute('class', 'books');
+    heading.setAttribute('class', 'non-show');
+    add.style.color = 'green';
   }
 
-  showAdddeff();
+  showAddSectionFirst();
 
   function showList() {
-    document.getElementById('list-section').setAttribute('class', 'show');
-    document.getElementById('add-section').setAttribute('class', 'non-show');
-    document
-      .getElementById('contact-section')
-      .setAttribute('class', 'non-show');
-    document.getElementById('books').setAttribute('class', 'books');
-    document.getElementById('heading').setAttribute('class', 'heading');
-    document.getElementById('add').style.color = 'black';
-    document.getElementById('lis').style.color = 'green';
-    document.getElementById('con').style.color = 'black';
-  }
-  function showAdd() {
-    document.getElementById('add').style.color = 'green';
-    document.getElementById('lis').style.color = 'black';
-    document.getElementById('con').style.color = 'black';
-    document.getElementById('list-section').setAttribute('class', 'non-show');
-    document.getElementById('add-section').setAttribute('class', 'show');
-    document
-      .getElementById('contact-section')
-      .setAttribute('class', 'non-show');
-    document.getElementById('books').setAttribute('class', 'books');
-    document.getElementById('heading').setAttribute('class', 'non-show');
-  }
-  function showcontact() {
-    document.getElementById('books').setAttribute('class', 'non-show');
-    document.getElementById('heading').setAttribute('class', 'non-show');
-    document.getElementById('contact-section').setAttribute('class', 'show');
-    document.getElementById('add').style.color = 'black';
-    document.getElementById('lis').style.color = 'black';
-    document.getElementById('con').style.color = 'green';
+    listSection.setAttribute('class', 'show');
+    addSection.setAttribute('class', 'non-show');
+    contactSection.setAttribute('class', 'non-show');
+    books.setAttribute('class', 'books');
+    heading.setAttribute('class', 'heading');
+    addTextColor.style.color = 'black';
+    listTextColor.style.color = 'green';
+    contactTextColor.style.color = 'black';
   }
 
-  document.getElementById('add').addEventListener('click', () => {
+  function showAdd() {
+    addTextColor.style.color = 'green';
+    listTextColor.style.color = 'black';
+    contactTextColor.style.color = 'black';
+    listSection.setAttribute('class', 'non-show');
+    addSection.setAttribute('class', 'show');
+    contactSection.setAttribute('class', 'non-show');
+    books.setAttribute('class', 'books');
+    heading.setAttribute('class', 'non-show');
+  }
+
+  function showcontact() {
+    books.setAttribute('class', 'non-show');
+    heading.setAttribute('class', 'non-show');
+    contactSection.setAttribute('class', 'show');
+    addTextColor.style.color = 'black';
+    listTextColor.style.color = 'black';
+    contactTextColor.style.color = 'green';
+  }
+
+  addTextColor.addEventListener('click', () => {
     showAdd();
   });
-  document.getElementById('lis').addEventListener('click', () => {
+  listTextColor.addEventListener('click', () => {
     showList();
   });
-  document.getElementById('con').addEventListener('click', () => {
+  contactTextColor.addEventListener('click', () => {
     showcontact();
   });
 };
