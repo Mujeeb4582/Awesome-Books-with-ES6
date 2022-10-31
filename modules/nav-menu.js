@@ -6,18 +6,18 @@ import {
 
 const navMenu = () => {
   // Show add section on website when website loaded
-  function showAddSectionFirst() {
+  const showAddSectionFirst = () => {
     listSection.setAttribute('class', 'non-show');
     addSection.setAttribute('class', 'show');
     contactSection.setAttribute('class', 'non-show');
     books.setAttribute('class', 'books');
     heading.setAttribute('class', 'non-show');
     add.style.color = 'green';
-  }
+  };
 
   showAddSectionFirst();
 
-  function showList() {
+  const showList = () => {
     listSection.setAttribute('class', 'show');
     addSection.setAttribute('class', 'non-show');
     contactSection.setAttribute('class', 'non-show');
@@ -26,9 +26,9 @@ const navMenu = () => {
     addTextColor.style.color = 'black';
     listTextColor.style.color = 'green';
     contactTextColor.style.color = 'black';
-  }
+  };
 
-  function showAdd() {
+  const showAdd = () => {
     addTextColor.style.color = 'green';
     listTextColor.style.color = 'black';
     contactTextColor.style.color = 'black';
@@ -37,16 +37,16 @@ const navMenu = () => {
     contactSection.setAttribute('class', 'non-show');
     books.setAttribute('class', 'books');
     heading.setAttribute('class', 'non-show');
-  }
+  };
 
-  function showcontact() {
+  const showcontact = () => {
     books.setAttribute('class', 'non-show');
     heading.setAttribute('class', 'non-show');
     contactSection.setAttribute('class', 'show');
     addTextColor.style.color = 'black';
     listTextColor.style.color = 'black';
     contactTextColor.style.color = 'green';
-  }
+  };
 
   addTextColor.addEventListener('click', () => {
     showAdd();
