@@ -15,7 +15,10 @@ const addTextColor = document.querySelector('#add');
 const listTextColor = document.querySelector('#lis');
 const contactTextColor = document.querySelector('#con');
 
+// date element
+const date = document.querySelector('.date');
+
 export {
   // eslint-disable-next-line max-len
-  addBookForm, list, msg, success, listSection, addSection, contactSection, books, heading, add, addTextColor, listTextColor, contactTextColor,
+  addBookForm, list, msg, success, listSection, addSection, contactSection, books, heading, add, addTextColor, listTextColor, contactTextColor, date,
 };
