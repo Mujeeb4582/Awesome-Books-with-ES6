@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: #87ceeb;
+}
+
+.header {
+  margin: 0 12px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid green;
+  border-radius: 8px;
+  padding: 4px 12px;
+  padding-right: 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.navList li {
+  border-right: 2px solid green;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+.navList li:last-child {
+  border: none;
+}
+
+.navList li:hover {
+  color: green;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newBook {
+  margin-bottom: 16px;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+#bookInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.success {
+  color: green;
+}
+
+#bookInfo input {
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+.title,
+.author {
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  width: 220px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: solid green;
+}
+
+.addBtn {
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: blanchedalmond;
+  border: solid green;
+  box-shadow: 4px 2px #000;
+}
+
+.addBtn:hover {
+  background-color: green;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.listWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  padding: 4px 8px;
+}
+
+.listWrapper:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.listWrapper:nth-child(even) {
+  background-color: #fff;
+}
+
+.listWrapper button {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  box-shadow: 4px 2px #800;
+  cursor: pointer;
+}
+
+.listWrapper button:hover {
+  background-color: #f08080;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: 20px;
+}
+
+.message {
+  color: red;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 8px 16px;
+}
+
+.books_list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid green;
+  border-radius: 5px;
+  justify-items: center;
+}
+
+.books_list ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  padding-top: 5px;
+}
+
+.contact-section {
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-section h2 {
+  font-size: 40px;
+}
+
+.contact-section p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-section ul {
+  font-size: 20px;
+}
+
+.footerWrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  border: 3px solid green;
+  border-radius: 8px;
+  margin: 0 16px;
+  height: 10%;
+}
+
+.footerText {
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+.show {
+  display: contents;
+}
+
+.non-show {
+  display: none;
+}
