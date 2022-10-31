@@ -1,6 +1,9 @@
-import { addBookForm, msg, success } from './modules/HtmlElements.js';
+import {
+  addBookForm, msg, success, date,
+} from './modules/HtmlElements.js';
 import { clearField } from './modules/clearInputField.js';
 import navMenu from './modules/nav-menu.js';
+import { DateTime } from './modules/luxon.js';
 
 // eslint-disable-next-line import/no-cycle
 import BookInfo from './modules/bookInfo.js';
@@ -8,11 +11,12 @@ import BookInfo from './modules/bookInfo.js';
 // eslint-disable-next-line import/no-mutable-exports
 let booksList = []; // Declare a array for storing the bookList
 
-function ondate() {
-  document.querySelector('.date').innerHTML = Date();
-}
-
-ondate();
+// ==== Luxon Date ====
+const updateTime = () => {
+  const now = DateTime.now();
+  date.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+};
+setInterval(updateTime, 1000);
 
 const emptyMessage = () => {
   if (booksList.length === 0) {
