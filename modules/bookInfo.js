@@ -1,7 +1,6 @@
 import { list } from './HtmlElements.js';
-import {
-  booksList, emptyMessage,
-} from '../index.js';
+// eslint-disable-next-line import/no-cycle
+import { booksList, emptyMessage } from '../index.js';
 // make object instance and its methods
 class BookInfo {
   // create the object using constructor method
@@ -34,7 +33,7 @@ class BookInfo {
 
     // remove button click listner
     removeBtn.addEventListener('click', (event) => {
-    // Remove item from DOM
+      // Remove item from DOM
       event.target.parentElement.remove();
       // Remove item from booksList Array
       booksList.splice(booksListIndex, 1);
