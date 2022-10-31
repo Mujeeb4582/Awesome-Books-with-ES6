@@ -75,6 +75,10 @@ body {
   gap: 0;
 }
 
+.success {
+  color: green;
+}
+
 #bookInfo input {
   margin: 0;
 }
@@ -148,6 +152,13 @@ button {
   align-items: center;
   height: 50vh;
   gap: 20px;
+}
+
+.message {
+  color: red;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 8px 16px;
 }
 
 .books_list {
