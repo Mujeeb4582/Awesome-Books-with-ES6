@@ -8,8 +8,76 @@
   <title>Awesome Books List</title>
 </head>
 <body>
-  
+  <header class="header">
+    <br />
+    <nav class="navBar">
+      <h3 class="navHeading">Awesome Books</h3>
 
+      <ul class="navList">
+        <li id="lis">List</li>
+        <li id="add">Add new</li>
+        <li id="con">Contact</li>
+      </ul>
+    </nav>
+    <p class="date"></p>
+    <h1 id="heading" class="heading">All awesome books</h1>
+  </header>
+  <section class="books" id="books">
+    <div id="list-section">
+      <div class="books_list" id="books_list">
+        <p class="message" style="color: red; font-weight: 700; font-size: 26px; padding: 8px 16px;">List is empty!</p>
+      </div>
+    </div>
+    <br />
+    <div id="add-section">
+      <div class="formWrapper">
+        <p style="color: green" class="success"></p>
+        <h3 class="newBook">Add a new book</h3>
+      </div>
+      <form class="bookInfo" id="bookInfo">
+        <input
+          class="title"
+          name="bookTitle"
+          type="text"
+          placeholder="Title"
+          required /><br />
+        <input
+          class="author"
+          name="bookAuthor"
+          type="text"
+          placeholder="Author"
+          required /><br />
+        <button type="submit" class="addBtn">Add</button>
+      </form>
+    </div>
+  </section>
+  <section id="contact-section">
+    <div class="contact-section">
+      <h2>Contact information</h2>
+      <div>
+        <p>Do have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us</p>
+      </div>
+      <ul>
+        <li>Our e-mail: mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streetname 22, 84503 City,Country</li>
+      </ul>
+    </div>
+  </section>
+  <div class="footerWrapper">
+    <footer>
+      <div class="footerText">
+        <small>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Mujeeb ur Rahman <br/>
+        All Rights Reserved</small>
+      </div>
+    </footer>
+  </div>
 
   <script src="index.js"></script>
 </body>
