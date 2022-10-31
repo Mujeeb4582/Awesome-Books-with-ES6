@@ -23,7 +23,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://mujeeb4582.github.io/Awesome-books/)
+[Live Demo Link](https://mujeeb4582.github.io/Awesome-Books-with-ES6/)
 
 
 ## Getting Started
