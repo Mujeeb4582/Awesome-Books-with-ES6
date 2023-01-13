@@ -1,8 +1,9 @@
 import {
   addBookForm, msg, success, date,
 } from './modules/HtmlElements.js';
-import { clearField } from './modules/clearInputField.js';
+import clearField from './modules/clearInputField.js';
 import navMenu from './modules/nav-menu.js';
+import emptyMessage from './modules/emptyMessage.js';
 import { DateTime } from './modules/luxon.js';
 
 // eslint-disable-next-line import/no-cycle
@@ -18,20 +19,12 @@ const updateTime = () => {
 };
 setInterval(updateTime, 1000);
 
-const emptyMessage = () => {
-  if (booksList.length === 0) {
-    msg.style.display = 'block';
-  } else {
-    msg.style.display = 'none';
-  }
-};
-
 // nav section
 navMenu();
 
 // Loop over Array, create the element and append to the DOM
 const renderBookList = (lists) => {
-  emptyMessage();
+  emptyMessage(lists, msg);
   lists.forEach((element, index) => {
     const book = new BookInfo(element.title, element.author);
     book.createListItem(element, index);
@@ -74,7 +67,7 @@ addBookForm.addEventListener('submit', (event) => {
   clearField();
   // localstorage
   localStorage.setItem('list', JSON.stringify(booksList));
-  emptyMessage();
+  emptyMessage(booksList, msg);
 });
 
-export { emptyMessage, booksList };
+export default booksList;
