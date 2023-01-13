@@ -10,15 +10,25 @@ const addSection = document.querySelector('#add-section');
 const contactSection = document.querySelector('#contact-section');
 const books = document.querySelector('#books');
 const heading = document.querySelector('#heading');
-const add = document.querySelector('#add');
-const addTextColor = document.querySelector('#add');
-const listTextColor = document.querySelector('#lis');
-const contactTextColor = document.querySelector('#con');
+const addTextColor = document.querySelector('#addBook');
+const listTextColor = document.querySelector('#bookList');
+const contactTextColor = document.querySelector('#contact');
 
 // date element
 const date = document.querySelector('.date');
 
 export {
-  // eslint-disable-next-line max-len
-  addBookForm, list, msg, success, listSection, addSection, contactSection, books, heading, add, addTextColor, listTextColor, contactTextColor, date,
+  addBookForm,
+  list,
+  msg,
+  success,
+  listSection,
+  addSection,
+  contactSection,
+  books,
+  heading,
+  addTextColor,
+  listTextColor,
+  contactTextColor,
+  date,
 };
