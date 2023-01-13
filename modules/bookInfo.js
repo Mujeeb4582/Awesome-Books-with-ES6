@@ -1,6 +1,7 @@
-import { list } from './HtmlElements.js';
+import { list, msg } from './HtmlElements.js';
 // eslint-disable-next-line import/no-cycle
-import { booksList, emptyMessage } from '../index.js';
+import booksList from '../index.js';
+import emptyMessage from './emptyMessage.js';
 // make object instance and its methods
 class BookInfo {
   // create the object using constructor method
@@ -39,7 +40,7 @@ class BookInfo {
       booksList.splice(booksListIndex, 1);
       // Remove item from localStorage
       localStorage.setItem('list', JSON.stringify(booksList));
-      emptyMessage();
+      emptyMessage(booksList, msg);
     });
   }
 }
